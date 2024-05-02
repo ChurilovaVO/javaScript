@@ -1,0 +1,7 @@
+ol {
+list-style-type:none;
+}
+
+.product_show:hover ~ .container.comments_show{
+    display: block;
+}
