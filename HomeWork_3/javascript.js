@@ -35,12 +35,13 @@ btn.addEventListener('click', function (e) {
             showProducts();
     })
 
-//удалить отзыв
-//const removeButtonComment = document.querySelector('.removeButtonComment');
-removeButtonComment.addEventListener('click', function (e) {
-    arrayComments = JSON.parse(localStorage.getItem(removeButtonComment.name));
-    console.log(arrayComments);
-})
+//удалить отзыв  - Довыдумывала, работает!))))
+function removeComment(product,comment)  {
+    const arrayComments = JSON.parse(localStorage.getItem(product));
+    const resultArrayComments = arrayComments.filter(elemComment => elemComment!==comment);
+    localStorage.setItem(product,JSON.stringify(resultArrayComments));
+    showProducts();
+}
 
 //формирование списка продуктов, по которым есть отзывы
 function showProducts() {
@@ -74,6 +75,7 @@ function showComments(product, olComments) {
         removeButtonComment.className = 'removeButtonComment';
         removeButtonComment.name = product;
         removeButtonComment.value=comment;
+        removeButtonComment.setAttribute("onclick","removeComment(name,value)");
         
     }    
         //olComments.style.display = 'none';
