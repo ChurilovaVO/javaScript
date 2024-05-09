@@ -1,7 +1,3 @@
-.page-title {
-  text-align: center;
-}
-
 .slider-container {
   position: relative;
   width: 600px;
@@ -32,6 +28,24 @@
   border: none;
   font-size: 24px;
   color: white;
+}
+
+.circle{
+  margin: 20px auto;
+  display: flex;
+  gap:10px;
+  justify-content: center;
+}
+
+.circle_item{
+  width: 10px;
+  height: 10px;
+  background-color: darkslategrey;
+  border-radius: 50%;
+}
+
+.circle_item:hover {
+  background-color: darkgrey;
 }
 
 .prev-button {
