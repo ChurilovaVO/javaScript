@@ -35,7 +35,7 @@ body.insertAdjacentHTML('afterbegin',`
                         </p>
                         <button class="button_like">like</button>
                         <button class="button_clear">clear localStorage</button>
-                        <p>Количество понравившихся фотографий: <span class="favourity">${count}</span></p>
+                        <p>Мои лайки (количество): <span class="favourity">${count}</span></p>
                     </div>
                 </div>
             </div>
